@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 count = 0
+chr(output)
 for i in range(122, 96, -1):
     if count % 2 == 0:
         output += chr(i)
