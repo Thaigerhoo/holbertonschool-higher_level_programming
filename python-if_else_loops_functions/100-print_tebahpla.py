@@ -6,7 +6,7 @@ for i in range(122, 96, -1):
     else:
         output += chr(i - 32)
     count += 1
-    if count == 25:
+    if count == 26:
         break
 
 print("{}".format(output))
