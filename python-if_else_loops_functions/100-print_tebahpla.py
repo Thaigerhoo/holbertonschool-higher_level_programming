@@ -7,5 +7,7 @@ for i in range(122, 96, -1):
     else:
         output += chr(i - 32)
     count += 1
+    if count == 26:  # Stop when 26 characters are printed
+        break
 
 print("{}".format(output))
