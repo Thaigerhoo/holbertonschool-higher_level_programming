@@ -4,15 +4,15 @@ import sys
 
 def print_arguments():
     num_args = len(sys.argv) - 1
-    print(num_args, end=" ")
-    print("argument" + ("s" if num_args != 1 else "") + ":", end="")
 
     if num_args == 0:
-        print(".")
+        print("0 arguments.")
     else:
-        print()
-        for i in range(1, len(sys.argv)):
-            print(f"{i}: {sys.argv[i]}")
+        arg_args = 'argument' if num_args == 1 else 'arguments'
+        print(f"{num_args} {arg_args}:")
+
+    for i in range(1, len(sys.argv)):
+        print(f"{i}: {sys.argv[i]}")
 
 
 if __name__ == "__main__":
