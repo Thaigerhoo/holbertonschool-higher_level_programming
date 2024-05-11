@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 import sys
-import calculator_1
+from calculator_1 import add, sub, mul, div
 
 def calculate(a, operator, b):
     if operator == '+':
-        return calculator_1.add(a, b)
+        return add(a, b)
     elif operator == '-':
-        return calculator_1.sub(a, b)
+        return sub(a, b)
     elif operator == '*':
-        return calculator_1.mul(a, b)
+        return mul(a, b)
     elif operator == '/':
-        return calculator_1.div(a, b)
+        return div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, *, and /")
         sys.exit(1)
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
