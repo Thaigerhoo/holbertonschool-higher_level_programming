@@ -1,13 +1,6 @@
 #!/usr/bin/python3
-count = 0
-chr(output)
-for i in range(122, 96, -1):
-    if count % 2 == 0:
-        output += chr(i)
-    else:
-        output += chr(i - 32)
-    count += 1
-    if count == 26:
-        break
 
-print("{}".format(output))
+i = 0
+for c in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(c - i)), end="")
+    i = 32 if i == 0 else 0
