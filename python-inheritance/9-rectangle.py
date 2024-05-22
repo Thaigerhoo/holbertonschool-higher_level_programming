@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+Module containing a class that inherits from Basegeometry.
+
+"""
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
