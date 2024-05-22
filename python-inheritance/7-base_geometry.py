@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+Module containing basegeometry class with different raise cases
+
+"""
+
+
 class BaseGeometry:
     """ Class that defines the attributes of Geometric Shapes """
 
