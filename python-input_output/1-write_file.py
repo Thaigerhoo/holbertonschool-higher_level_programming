@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-Module containing function that returns the 
+"""
+Module containing function that returns the
 number of lines of a text file.
 
 """
