@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 
 Module that creates an Object from a JSON file.
 
