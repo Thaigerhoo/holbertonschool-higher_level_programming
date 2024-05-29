@@ -1,21 +1,24 @@
 #!/usr/bin/python3
 """
 
-Module comntaining a function that returns an object by
+Module that writes an Object to a text file using
 a JSON representation.
 
 """
 import json
 
 
-def from_json_string(my_str):
-    """ Function that returns an object by a JSON representation
+def save_to_json_file(my_obj, filename):
+    """ Function that writes an object to a text file
+    by a JSON representation
 
     Args:
-        my_str: JSON representation
+        my_obj: object
+        filename: textfile name
 
     Raises:
-        Exception: when the string can't be decoded
+        Exception: when the object can't be encoded
 
     """
-    return json.loads(my_str)
+    with open(filename, 'w', encoding="utf-8") as file:
+        json.dump(my_obj, file)
