@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import http.server
 import socketserver
 import json
@@ -23,10 +22,14 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"OK")
         else:
-            self.send_error(404, "Endpoint not found")
+            self.send_response(404)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"Endpoint not found")
 
 
 PORT = 8000
+
 with socketserver.TCPServer(("", PORT), MyHTTPRequestHandler) as httpd:
     print(f"Serving on port {PORT}")
     httpd.serve_forever()
