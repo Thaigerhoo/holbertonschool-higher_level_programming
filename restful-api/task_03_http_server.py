@@ -26,10 +26,3 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
-
-
-PORT = 8000
-
-with socketserver.TCPServer(("", PORT), MyHTTPRequestHandler) as httpd:
-    print(f"Serving on port {PORT}")
-    httpd.serve_forever()
