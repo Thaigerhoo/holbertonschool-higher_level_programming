@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-
-Module containing rebel class.
-
-"""
+"""Defines a class MyInt that inherits from int."""
 
 
 class MyInt(int):
-    def __eq__(self, other):
-        """ Method that overrides the == operator to act like != """
-        return self.real != other
+    """Invert int operators == and !=."""
 
-    def __ne__(self, other):
-        """ Method that overrides the != operator to act like == """
-        return self.real == other
+    def __eq__(self, value):
+        """Override == opeartor with != behavior."""
+        return self.real != value
+
+    def __ne__(self, value):
+        """Override != operator with == behavior."""
+        return self.real == value
