@@ -15,5 +15,5 @@ class MyList(list):
     """
 
     def print_sorted(self):
-        """ Method thaat prints the sorted list """
+        """ Method that prints the sorted list """
         print(sorted(self))
