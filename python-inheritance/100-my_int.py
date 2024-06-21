@@ -7,10 +7,10 @@ Module containing a rebel class.
 
 
 class MyInt(int):
-    def __eq__(self, other):
+    def __eq__(self, value):
         """ Method that overrides the == operator to act like != """
-        return self.real != other
+        return self.real != value
 
-    def __ne__(self, other):
+    def __ne__(self, value):
         """ Method that overrides the != operator to act like == """
-        return self.real == other
+        return self.real == value
