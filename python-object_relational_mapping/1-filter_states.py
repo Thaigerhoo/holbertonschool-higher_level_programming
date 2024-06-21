@@ -6,19 +6,24 @@ Module containing a script that list all states with added specifications
 """
 
 
+import MySQLdb
+import sys
+
 if __name__ == '__main__':
-    import MySQLdb
-    from sys import argv
-    db = MySQLdb.connect(host="localhost",
-                         port=3306,
-                         user=argv[1],
-                         passwd=argv[2],
-                         db=argv[3])
+
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
+
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states WHERE
-                name LIKE BINARY "N%" ORDER BY id""")
+
+    cur.execute(
+        "SELECT * FROM states WHERE name Like 'N%' ORDER BY states.id ASC")
+
     rows = cur.fetchall()
+
     for row in rows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
+
     cur.close()
     db.close()
