@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""
+
+Module containing a practice of duck typing.
+
+"""
+
+
 from abc import ABC, abstractmethod
 import math
 

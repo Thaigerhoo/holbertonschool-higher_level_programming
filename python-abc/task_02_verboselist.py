@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""
+
+Module containing that provide custom behaviour to built-in classes.
+
+"""
+
+
 class VerboseList(list):
     def append(self, item):
         super().append(item)
