@@ -7,7 +7,7 @@ Module containing a coding challenge.
 
 
 def pascal_triangle(n):
-    # If n is less than or equal to 0, return an empty list.
+    """ Here i am replicating the formula to create Pascal's Triangle """
     if n <= 0:
         return []
     # Initialize the triangle with the first row.
