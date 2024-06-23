@@ -1,3 +1,12 @@
+#!/usr/bin/python3
+"""
+
+Module containig a class that extends the built-in iterator obtained
+from the iter function.
+
+"""
+
+
 class CountedIterator:
     def __init__(self, iterable):
         self.iterable = iterable

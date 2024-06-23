@@ -1,3 +1,12 @@
+#!/usr/bin/python3
+"""
+
+Module containing MixIns that add functionality
+to classes in a modular fashion.
+
+"""
+
+
 class SwimMixin:
     def swim(self):
         print("The creature swims!")

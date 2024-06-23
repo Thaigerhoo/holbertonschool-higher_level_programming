@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+"""
+
+Module containing a class that inherits from multiple parent classes.
+
+"""
+
+
 class Fish:
     def swim(self):
         print("The fish is swimming")
